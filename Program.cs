@@ -94,10 +94,9 @@ namespace ConPop
 
             Console.WriteLine(_provider.CityCount());
 
-            var top10 = _provider.Top10City(2020);
+            var top10 = _provider.Top10City(2020) ?? new();
             foreach (City city in top10) {
                 Console.WriteLine(city.CityName);
-
             }
 
             var input = "";
